@@ -7,29 +7,23 @@ import java.sql.SQLOutput;
 public class Main {
     public static void main(String[] args) {
 
+
+        Funcionario funcionarios= new Funcionario("b",300,"d");
         Departamento dep= new Departamento();
-        dep.setNome("Financeiro");
         Departamento dep2= new Departamento();
-        dep2.setNome("Marketing");
-        Departamento dep3= new Departamento();
-        dep3.setNome("Limpeza");
-        Departamento dep4= new Departamento();
-        dep4.setNome("TI");
-
-
-        Funcionario funcionario;
-        dep4.adicionarFuncionario(funcionario= new Funcionario("a",100,"c"));
-        dep4.adicionarFuncionario(funcionario= new Funcionario("a",200,"c"));
-
-        dep4.aumentoSalario();
         Empresa empresa= new Empresa();
+        //Setando o nome dos departamentos
+        dep.setNome("Limpeza");
+        dep2.setNome("TI");
+        //Se a empresa for de TI, haverá aumento
+        dep2.aumentoSalario();
+       //Setando nome da empresa
         empresa.setNome("Carrefour");
         empresa.setCNPJ("xxxxxx");
 
+      //Adicionando Funcionários a empresa
         empresa.adicionarDepartamento(dep);
-        empresa.adicionarDepartamento(dep2);
-        empresa.adicionarDepartamento(dep3);
-        empresa.adicionarDepartamento(dep4);
+        empresa.adicionarFuncionario(dep,funcionarios);
 
         empresa.imprimirDepartamentos();
     }

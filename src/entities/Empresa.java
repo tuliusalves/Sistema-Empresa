@@ -41,7 +41,7 @@ public class Empresa {
     //Lembre de postar no gitHub antes de fazer o método abaixo.
     //adicione funcionários através da empresa
     public void adicionarFuncionario(Departamento departamento, Funcionario funcionario){
-
+        departamento.adicionarFuncionario(funcionario);
     }
 
     public void imprimirDepartamentos(){
